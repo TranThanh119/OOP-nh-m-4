@@ -9,10 +9,10 @@
 
 # Menu Bar 
 1. File:
-  -New Folder (Tạo thư mục mới)
-  -Upload (Tải lên)
-  -Download (Tải xuống)
-  -Exit (Thoát)
+  - New Folder (Tạo thư mục mới)
+  - Upload (Tải lên)
+  - Download (Tải xuống)
+  - Exit (Thoát)
 2. Edit:
   -Cut (Cắt)
   -Copy (Sao chép)
