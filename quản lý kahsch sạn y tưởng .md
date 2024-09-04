@@ -10,7 +10,7 @@
     private String phoneNumber;
     private String email;
 
-    // Constructor, getters và setters
+
  }
 2) lớp phòng
    public class Room {
@@ -19,7 +19,7 @@
     private double price;
     private boolean available;
 
-    // Constructor, getters và setters
+
  }
 3) lớp đặt phòng
    public class Booking {
@@ -29,7 +29,7 @@
     private LocalDate checkInDate;
     private LocalDate checkOutDate;
 
-    // Constructor, getters và setters
+
  }
 4) điều khiển
    public class HotelController {
@@ -42,7 +42,7 @@
     @FXML
     private DatePicker checkOutDate;
 
-    // Các phương thức xử lý sự kiện: thêm khách hàng, đặt phòng, quản lý phòng
+
  }
 5) main application
    public class Main extends Application {
