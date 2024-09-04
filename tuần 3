@@ -1,0 +1,28 @@
+public class DisruptLecture {
+ public static void main(String[] args) {
+ CellPhone noiseMaker = new CellPhone(); 
+//tạo tiếng điện thoại mới 
+ ObnoxiousTune ot = new ObnoxiousTune();
+//tạo giai điệu 
+ noiseMaker.ring(ot);
+// rung chuông 
+ }
+}
+
+class CellPhone {
+ CellPhone() { //…}
+ public void ring(Tune t) { t.play(); } 
+// khai báo lớp điện thoại khởi tạo tiếng chuông
+}
+class Tune {
+ Tune() { //…}
+ public void play() {
+ System.out.println("Tune.play()");
+ }
+}
+class ObnoxiousTune extends Tune{
+ ObnoxiousTune() { // …}
+ public void play() {
+ System.out.println("ObnoxiousTune.play()");
+ }
+}
