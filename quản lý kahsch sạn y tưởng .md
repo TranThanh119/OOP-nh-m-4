@@ -10,15 +10,19 @@
     private String name;
     private String phoneNumber;
     private String email;
- }
-2) lớp phòng
+
+}
+
+1) lớp phòng
    
    public class Room {
     private int roomNumber;
     private String type;
     private double price;
     private boolean available;
+
  }
+ 
 3) lớp đặt phòng
    
    public class Booking {
@@ -27,7 +31,9 @@
     private Room room;
     private LocalDate checkInDate;
     private LocalDate checkOutDate;
+
  }
+ 
 4) điều khiển
    
    public class HotelController {
@@ -39,11 +45,12 @@
     private DatePicker checkInDate;
     @FXML
     private DatePicker checkOutDate;
+
  }
+ 
 5) main application
    
    public class Main extends Application {
-    @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("hotel_management.fxml"));
         primaryStage.setTitle("Hotel Management System");
@@ -53,5 +60,5 @@
     public static void main(String[] args) {
         launch(args);
     }
- }
+}
 
