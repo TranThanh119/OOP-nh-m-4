@@ -1,4 +1,4 @@
-## Cấu trức tổng quan (ý tưởng lấy từ chapGPT)
+## Cấu trức tổng quan (ý tưởng lấy một phần từ chapGPT)
 - Main Window: Cửa sổ chính chứa tất cả các thành phần giao diện khác
 - TollBar: Chứa các chức năng như tạo thư mục mới, upload, download, chia sẻ, xóa, và tìm kiếm thư mục
 - TreeView (Panel bên trái): Hiển thị cấu trúc thư mục dưới dạng cây phân cấp, giúp người dùng dễ dàng điều hướng.
