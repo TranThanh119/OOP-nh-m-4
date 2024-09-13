@@ -19,6 +19,7 @@
 -- Table structure for table `account`
 --
 
+//Dang nhap tai khoan
 DROP TABLE IF EXISTS `account`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -70,59 +71,14 @@ UNLOCK TABLES;
 -- Table structure for table `giangvien`
 --
 
+//Giang VVien
 DROP TABLE IF EXISTS `giangvien`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `giangvien` (
   `id` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `ten` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `gioitinh` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ngaysinh` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `mail` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `sdt` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `giangvien`
---
-
-LOCK TABLES `giangvien` WRITE;
-/*!40000 ALTER TABLE `giangvien` DISABLE KEYS */;
-INSERT INTO `giangvien` VALUES ('1','Hoài Nam','Nam','Sep 16, 1988','1@gmail','1'),('2','Tôn Nữ','Nữ','Dec 13, 1996','2@gmail','2'),('3','Thái Nhân','Nam','Sep 16, 2001','3@gmail','3'),('4','Quốc Trung','Nam','Dec 16, 1994','trung@gmail.com','09876'),('5','Hà Nhi','Nữ','Apr 20, 1994','nhi@gmail.com','09876123123');
-/*!40000 ALTER TABLE `giangvien` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `monhoc`
---
-
-DROP TABLE IF EXISTS `monhoc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `monhoc` (
-  `id` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `ten` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `idgv` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `monhoc`
---
-
-LOCK TABLES `monhoc` WRITE;
-/*!40000 ALTER TABLE `monhoc` DISABLE KEYS */;
-INSERT INTO `monhoc` VALUES ('1','java','1'),('2','Ngôn ngữu lập trình tiên tiến','3'),('3','Toán cao cấp 1','2'),('4','Vi sinh','5'),('5','Điện tử','4');
-/*!40000 ALTER TABLE `monhoc` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `sinhvien`
---
-
+  `gioitinVien
 DROP TABLE IF EXISTS `sinhvien`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
