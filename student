@@ -26,3 +26,47 @@ public class Student {
     public String getAddress() { return address; }
     public void setAddress(String address) { this.address = address; }
 }
+
+package view;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class StudentView extends JFrame {
+    private JTextField txtId = new JTextField(15);
+    private JTextField txtName = new JTextField(15);
+    private JTextField txtAge = new JTextField(15);
+    private JTextField txtAddress = new JTextField(15);
+    private JButton btnAdd = new JButton("Add");
+    private JButton btnUpdate = new JButton("Update");
+    private JButton btnDelete = new JButton("Delete");
+
+    public StudentView() {
+        this.setTitle("Student Management");
+        this.setSize(400, 300);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        
+        JPanel panel = new JPanel(new GridLayout(5, 2));
+        panel.add(new JLabel("Student ID:"));
+        panel.add(txtId);
+        panel.add(new JLabel("Name:"));
+        panel.add(txtName);
+        panel.add(new JLabel("Age:"));
+        panel.add(txtAge);
+        panel.add(new JLabel("Address:"));
+        panel.add(txtAddress);
+
+        panel.add(btnAdd);
+        panel.add(btnUpdate);
+        panel.add(btnDelete);
+
+        this.add(panel);
+    }
+
+    // Getter để controller thao tác với view
+    public String getStudentId() { return txtId.getText(); }
+    public String getStudentName() { return txtName.getText(); }
+    public String getStudentAge() { return txtAge.getText(); }
+    public String getStudentAddress() { return txtAddress.getText(); }
+}
