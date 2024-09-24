@@ -70,3 +70,50 @@ public class StudentView extends JFrame {
     public String getStudentAge() { return txtAge.getText(); }
     public String getStudentAddress() { return txtAddress.getText(); }
 }
+
+package controller;
+
+import view.StudentView;
+import model.Student;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class StudentController {
+    private StudentView view;
+
+    public StudentController(StudentView view) {
+        this.view = view;
+        this.view.setVisible(true);
+
+        this.view.getBtnAdd().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Lấy dữ liệu từ view
+                String id = view.getStudentId();
+                String name = view.getStudentName();
+                int age = Integer.parseInt(view.getStudentAge());
+                String address = view.getStudentAddress();
+
+                // Tạo một đối tượng Student
+                Student student = new Student(id, name, age, address);
+
+                // Logic để thêm sinh viên vào danh sách (hoặc database)
+                JOptionPane.showMessageDialog(null, "Student Added: " + student.getName());
+            }
+        };
+    }
+}
+
+package main;
+
+import view.StudentView;
+import controller.StudentController;
+
+public class Main {
+    public static void main(String[] args) {
+        StudentView view = new StudentView();
+        StudentController controller = new StudentController(view);
+    }
+}
