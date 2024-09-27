@@ -1,7 +1,7 @@
 # Final Project - nhóm 4 - Thành và Đức 
 ## Group 4
 - Trần Văn Thành - 21012328 - 21012328@st.phenikaa-uni.edu.vn
-- Bùi Trung Đức 
+- Bùi Trung Đức - 21012492 - 21012492@st.phenikaa-uni.edu.vn
 
 # Title: Xây sựng ứng dụng về quản lý sinh viên java
 phần mềm quản lý sinh viên dành cho giáo viên : điểm danh, thông tin sinh viên, thống kê điểm số môn học ,...
