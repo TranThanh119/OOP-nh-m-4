@@ -1,0 +1,133 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Student {
+    private String id;
+    private String name;
+
+    public Student(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class StudentManager {
+    private List<Student> students = new ArrayList<>();
+
+    // Thêm sinh viên vào danh sách
+    public void addStudent(String id, String name) throws Exception {
+        if (id == null || id.trim().isEmpty()) {
+            throw new Exception("Mã sinh viên không được rỗng");
+        }
+        if (name == null || name.trim().isEmpty()) {
+            throw new Exception("Tên sinh viên không được rỗng");
+        }
+
+        // Kiểm tra sinh viên đã tồn tại hay chưa
+        for (Student student : students) {
+            if (student.getId().equals(id)) {
+                throw new Exception("Sinh viên với mã " + id + " đã tồn tại.");
+            }
+        }
+        
+        students.add(new Student(id, name));
+        System.out.println("Thêm sinh viên thành công: " + name);
+    }
+
+    // Tìm sinh viên theo mã
+    public Student findStudent(String id) throws Exception {
+        if (id == null || id.trim().isEmpty()) {
+            throw new RuntimeException("Mã sinh viên không được rỗng.");
+        }
+        for (Student student : students) {
+            if (student.getId().equals(id)) {
+                return student;
+            }
+        }
+        throw new Exception("Không tìm thấy sinh viên với mã: " + id);
+    }
+
+    // Xóa sinh viên theo mã
+    public void deleteStudent(String id) throws Exception {
+        if (id == null || id.trim().isEmpty()) {
+            throw new RuntimeException("Mã sinh viên không được rỗng.");
+        }
+
+        Student studentToRemove = null;
+        for (Student student : students) {
+            if (student.getId().equals(id)) {
+                studentToRemove = student;
+                break;
+            }
+        }
+        if (studentToRemove == null) {
+            throw new Exception("Sinh viên không tồn tại: " + id);
+        }
+
+        students.remove(studentToRemove);
+        System.out.println("Xóa sinh viên thành công: " + studentToRemove.getName());
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        StudentManager manager = new StudentManager();
+
+        while (true) {
+            System.out.println("Quản lý sinh viên:");
+            System.out.println("1. Thêm sinh viên");
+            System.out.println("2. Tìm sinh viên");
+            System.out.println("3. Xóa sinh viên");
+            System.out.println("4. Thoát");
+            System.out.print("Lựa chọn của bạn: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // đọc bỏ dòng trống
+
+            try {
+                switch (choice) {
+                    case 1:
+                        System.out.print("Nhập mã sinh viên: ");
+                        String id = scanner.nextLine();
+                        System.out.print("Nhập tên sinh viên: ");
+                        String name = scanner.nextLine();
+                        manager.addStudent(id, name);
+                        break;
+
+                    case 2:
+                        System.out.print("Nhập mã sinh viên cần tìm: ");
+                        String searchId = scanner.nextLine();
+                        Student student = manager.findStudent(searchId);
+                        System.out.println("Tìm thấy sinh viên: " + student.getName());
+                        break;
+
+                    case 3:
+                        System.out.print("Nhập mã sinh viên cần xóa: ");
+                        String deleteId = scanner.nextLine();
+                        manager.deleteStudent(deleteId);
+                        break;
+
+                    case 4:
+                        System.out.println("Thoát chương trình.");
+                        return;
+
+                    default:
+                        System.out.println("Lựa chọn không hợp lệ.");
+                }
+            } catch (RuntimeException e) {
+                // Bắt lỗi do nhập mã sinh viên rỗng (RuntimeException)
+                System.out.println("Lỗi Runtime: " + e.getMessage());
+            } catch (Exception e) {
+                // Bắt các lỗi khác (Exception)
+                System.out.println("Lỗi: " + e.getMessage());
+            }
+        }
+    }
+}
