@@ -7,8 +7,6 @@ public class GiangvienBuilder {
 	private String ten;
 	private String gioitinh;
 	private String ngaysinh;
-	private String mail;
-	private String sdt;
 
 	public GiangvienBuilder setId(String id) {
 		this.id = id;
@@ -26,15 +24,7 @@ public class GiangvienBuilder {
 		this.ngaysinh = ngaysinh;
 		return this;
 	}
-	public GiangvienBuilder setEmail(String email) {
-		this.mail = email;
-		return this;
-	}
-	public GiangvienBuilder setSDT(String sdt) {
-		this.sdt = sdt;
-		return this;
-	}
 	public GiangVien build() {
-		return new GiangVien(id,ten,gioitinh,ngaysinh,mail,sdt);
+		return new GiangVien(id,ten,gioitinh,ngaysinh);
 	}
 }
