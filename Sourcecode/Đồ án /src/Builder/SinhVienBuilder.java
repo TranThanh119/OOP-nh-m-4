@@ -8,8 +8,6 @@ public class SinhVienBuilder {
 	private String gioitinh;
 	private String ngaysinh;
 	private String lop;
-	private String email;
-	private String sdt;
 
 	public SinhVienBuilder setId(String id) {
 		this.id = id;
@@ -31,15 +29,7 @@ public class SinhVienBuilder {
 		this.lop = lop;
 		return this;
 	}
-	public SinhVienBuilder setEmail(String email) {
-		this.email = email;
-		return this;
-	}
-	public SinhVienBuilder setSDT(String sdt) {
-		this.sdt = sdt;
-		return this;
-	}
 	public SinhVien build() {
-		return new SinhVien(id,ten,gioitinh,ngaysinh,lop,email,sdt);
+		return new SinhVien(id,ten,gioitinh,ngaysinh,lop);
 	}
 }
