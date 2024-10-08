@@ -7,14 +7,11 @@
 phần mềm quản lý sinh viên 
 
 ## Chức năng chính 
-- thêm sửa xóa thông tin sinh viên, giảng viên
-- thêm sửa xóa điểm 
-- thêm sửa xóa môn học
-- thông tin sinh viên 
-- lấy thông tin môn học, lớp học 
+- thêm sửa xóa thông tin sinh viên, giảng viên, điểm, môn học
+- nhập thông tin sinh viên, giảng viên, điểm, môn học 
 - thêm sinh viên vào lớp 
-- nhập điểm 
-
+- quản lý môn học điểm 
+- quản lý điểm 
 ## UML dự án 
 1.1 UML component diagram
 ![image](https://github.com/user-attachments/assets/c8e11b59-844e-42a2-a2ee-437d13158756)
