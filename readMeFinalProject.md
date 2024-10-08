@@ -4,13 +4,13 @@
 - Bùi Trung Đức  - 21012492 - 21012492@st.phenikaa-uni.edu.vn
 
 ## Title: Xây sựng ứng dụng về quản lý sinh viên java
-phần mềm quản lý sinh viên 
+Phần mềm quản lý sinh viên 
 
 ## Chức năng chính 
-- thêm sửa xóa thông tin sinh viên, điểm, môn học
-- nhập thông tin sinh viên, điểm, môn học 
-- quản lý môn học 
-- quản lý điểm 
+- Thêm sửa xóa thông tin sinh viên, điểm, môn học
+- Nhập thông tin sinh viên, điểm, môn học 
+- Quản lý môn học 
+- Quản lý điểm 
 ## UML dự án 
 1.1 UML component diagram
 ![image](https://github.com/user-attachments/assets/c8e11b59-844e-42a2-a2ee-437d13158756)
