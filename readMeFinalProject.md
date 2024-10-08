@@ -17,5 +17,6 @@ phần mềm quản lý sinh viên
 1.2 Quản lý thông tin sinh viên 
 ![TTSV](https://github.com/user-attachments/assets/4808bd7b-e3bc-4139-8850-054c74d3f82b)
 1.3 Quản lý điểm
-
+![QLĐ](https://github.com/user-attachments/assets/288791ba-13e6-4aa7-a97c-780b5c9442a8)
 1.4 Quản lý môn học
+![QLMH](https://github.com/user-attachments/assets/6a49acea-f684-4e35-b165-8ba759f78213)
