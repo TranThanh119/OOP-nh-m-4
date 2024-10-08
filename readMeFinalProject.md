@@ -15,7 +15,7 @@ phần mềm quản lý sinh viên
 1.1 UML component diagram
 ![image](https://github.com/user-attachments/assets/c8e11b59-844e-42a2-a2ee-437d13158756)
 1.2 Quản lý thông tin sinh viên 
-   
+![TTSV](https://github.com/user-attachments/assets/4808bd7b-e3bc-4139-8850-054c74d3f82b)
 1.3 Quản lý điểm
 
 1.4 Quản lý môn học
