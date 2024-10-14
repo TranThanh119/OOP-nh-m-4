@@ -11,9 +11,6 @@ import util.ColorFrame;
 
 public class signUpFrame extends javax.swing.JFrame {
     ColorFrame colorFrame = new ColorFrame();
-    /**
-     * Creates new form sigUpFrame
-     */
     public signUpFrame() {
         initComponents();
         setDetail();
@@ -52,8 +49,7 @@ public class signUpFrame extends javax.swing.JFrame {
             warnLabel.setForeground(Color.BLUE);
         }
     }
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    @SuppressWarnings("unchecked")                      
     private void initComponents() {
 
         titleLabel = new javax.swing.JLabel();
@@ -137,20 +133,17 @@ public class signUpFrame extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>                        
+    }                   
 
     private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        // TODO add your handling code here:
         createUser();
     }                                            
-
-    // Variables declaration - do not modify                     
+               
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField nameField;
     private javax.swing.JTextField passField;
     private javax.swing.JButton signUpButton;
     private javax.swing.JLabel titleLabel;
-    private javax.swing.JLabel warnLabel;
-    // End of variables declaration                   
+    private javax.swing.JLabel warnLabel;               
 }
