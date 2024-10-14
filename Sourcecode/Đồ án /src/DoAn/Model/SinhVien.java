@@ -1,70 +1,93 @@
-package DoAn.Model;
 
-public class SinhVien {
-	private String id;
-	private String ten;
-	private String gioitinh;
-	private String ngaysinh;
-	private String lop;
-	private String email;
-	private String sdt;
-	
-	public SinhVien() {
-	}
-	public SinhVien(String id, String ten, String lop, String sdt, String gioitinh, String ngaysinh, String email) {
-		this.id=id;
-		this.ten=ten;
-		this.lop=lop;
-		this.sdt=sdt;
-		this.gioitinh=gioitinh;
-		this.ngaysinh=ngaysinh;
-		this.email=email;
-	}
-	public String getID() {
-		return id;
-	}
-	public void setID(String id) {
-		this.id=id;
-	}
-	
-	public String getTen() {
-		return ten;
-	}
-	public void setTen(String ten) {
-		this.ten=ten;
-	}
-	
-	public String getLop() {
-		return lop;
-	}
-	public void setLop(String lop) {
-		this.lop=lop;
-	}
-	
-	public String getSdt() {
-		return sdt;
-	}
-	public void setSdt(String sdt) {
-		this.sdt=sdt;
-	}
-	public String getGioitih() {
-		return gioitinh;
-	}
-	public void setGioitinh(String gioitinh) {
-		this.gioitinh=gioitinh;
-	}
-	
-	public String getNgaysinh() {
-		return ngaysinh;
-	}
-	public void setNgaysinh(String ngaysinh) {
-		this.ngaysinh=ngaysinh;
-	}
-	
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email=email;
-	}
+package models;
+
+public class Student {
+    private int stID = 0;
+    private String stName = "";
+    private String stBirth = "";
+    private String stGender = "";
+    private int stPhone = 0;
+    private String stClass = "";
+    private float stPoint = 0;
+    private int stPonit_R = 0;
+    private byte[] hinhanh = null;
+
+    public Student() {
+    }
+
+    public Student(int stID, String stName, String stBirth, String stGender, int stPhone, String stClass, float stPoint, int stPonit_R) {
+        this.stID = stID;
+        this.stName = stName;
+        this.stBirth = stBirth;
+        this.stGender = stGender;
+        this.stPhone = stPhone;
+        this.stClass = stClass;
+        this.stPoint = stPoint;
+        this.stPonit_R = stPonit_R;
+    }
+
+    public int getStID() {
+        return stID;
+    }
+
+    public void setStID(int stID) {
+        this.stID = stID;
+    }
+
+    public String getStName() {
+        return stName;
+    }
+
+    public void setStName(String stName) {
+        this.stName = stName;
+    }
+
+    public String  getStBirth() {
+        return stBirth;
+    }
+
+    public void setStBirth(String stBirth) {
+        this.stBirth = stBirth;
+    }
+
+    public String getStGender() {
+        return stGender;
+    }
+
+    public void setStGender(String stGender) {
+        this.stGender = stGender;
+    }
+
+    public int getStPhone() {
+        return stPhone;
+    }
+
+    public void setStPhone(int stPhone) {
+        this.stPhone = stPhone;
+    }
+
+    public String getStClass() {
+        return stClass;
+    }
+
+    public void setStClass(String stClass) {
+        this.stClass = stClass;
+    }
+
+    public float getStPoint() {
+        return stPoint;
+    }
+
+    public void setStPoint(float stPoint) {
+        this.stPoint = stPoint;
+    }
+
+    public int getStPonit_R() {
+        return stPonit_R;
+    }
+
+    public void setStPonit_R(int stPonit_R) {
+        this.stPonit_R = stPonit_R;
+    }
+    
 }
