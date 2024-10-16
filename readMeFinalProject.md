@@ -27,7 +27,7 @@ Phần mềm quản lý sinh viên
 ### 2) Màn hình chính
 ![image](https://github.com/user-attachments/assets/033335c7-43e9-42b5-9d09-b52f33efa13d)
 ### 3) Thêm sinh viên
-![image](https://github.com/user-attachments/assets/d74f6d9d-7fd3-4172-828a-5397862e33b2)
+![image](https://github.com/user-attachments/assets/2d182230-bd68-42e4-8a60-c00056839d33)
 ### 4) Sửa, xóa sinh viên
 ![image](https://github.com/user-attachments/assets/fabe973c-8b06-4098-b6b0-057491b472ab)
 
