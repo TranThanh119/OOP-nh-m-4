@@ -23,3 +23,5 @@ Phần mềm quản lý sinh viên
 ![QLMH](https://github.com/user-attachments/assets/6a49acea-f684-4e35-b165-8ba759f78213)
 1.5 hình ảnh đầu tiên của dự án
 ![image](https://github.com/user-attachments/assets/0035d3a2-cf17-40be-a4df-5de38f43fade)
+Cách mở dự án:
+1) 
