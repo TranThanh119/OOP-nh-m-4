@@ -187,7 +187,7 @@ public class addFrame extends javax.swing.JFrame {
         jLabel5.setText("Giới tính");
         jLabel5.setToolTipText("");
 
-        jLabel6.setText("Phone");
+        jLabel6.setText("SĐT");
 
         jLabel7.setText("Điểm");
 
