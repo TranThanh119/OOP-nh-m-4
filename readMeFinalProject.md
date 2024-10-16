@@ -22,9 +22,9 @@ Phần mềm quản lý sinh viên
 1.4 Quản lý môn học
 ![QLMH](https://github.com/user-attachments/assets/6a49acea-f684-4e35-b165-8ba759f78213)
 ## Một số hình ảnh của dự án
-# 1 Màn hình đăng nhập
+### 1 Màn hình đăng nhập
 ![image](https://github.com/user-attachments/assets/1e2175d2-42fe-484e-9db5-6dedeea4a812)
-# 2 Màn hình chính
+### 2 Màn hình chính
 ![image](https://github.com/user-attachments/assets/033335c7-43e9-42b5-9d09-b52f33efa13d)
 
 ### Hướng dẫn cài thư viện
