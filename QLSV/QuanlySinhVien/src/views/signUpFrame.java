@@ -32,20 +32,20 @@ public class signUpFrame extends javax.swing.JFrame {
         userController uc = new userController();
         if(name.equals("")){
             resetSatus();
-            warnLabel.setText("User's name is null!");
+            warnLabel.setText("Tài khoản trống");
         }
         else if(uc.checkUser(name)){
             resetSatus();
-            warnLabel.setText("This user was existed!");
+            warnLabel.setText("Tài khoản đã tồn tại!");
         }
         else if(pass.equals("")){
             resetSatus();
-            warnLabel.setText("Password is null!");
+            warnLabel.setText("Mật khẩu trống!");
         }
         else{
             resetSatus();
             uc.insertUser(name, pass);
-            warnLabel.setText("Create user succesfully!");
+            warnLabel.setText("Thành công!");
             warnLabel.setForeground(Color.BLUE);
         }
     }
