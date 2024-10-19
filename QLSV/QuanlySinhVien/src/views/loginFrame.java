@@ -75,7 +75,7 @@ public class loginFrame extends javax.swing.JFrame {
                     statue = 1;
                 }
             } else {
-                //Nguoi dung khong ton tai
+                //Người dùng chưa đăng kí
                 resetStatus();
                 nameWarningLabel.setText("Người dùng chưa đăng kí!");
             }
@@ -87,7 +87,7 @@ public class loginFrame extends javax.swing.JFrame {
             String newPass = "123456789";
             userC1.updatePass(userC1.getUser1().getUserName(), newPass);
             passWordField1.setText(newPass);
-            passWarningLabel.setText("Your new password is " + newPass);
+            passWarningLabel.setText("Mật khẩu mới của bạn là " + newPass);
         }
     }
 

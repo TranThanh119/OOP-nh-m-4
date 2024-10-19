@@ -175,6 +175,11 @@ public class addFrame extends javax.swing.JFrame {
 
         editGenderComboBox.setEditable(true);
         editGenderComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
+        editGenderComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editGenderComboBoxActionPerformed(evt);
+            }
+        });
 
         idDField.setEnabled(false);
 
@@ -377,6 +382,10 @@ public class addFrame extends javax.swing.JFrame {
     private void xoaAnhBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoaAnhBTNActionPerformed
         xoaAnhFunc();
     }//GEN-LAST:event_xoaAnhBTNActionPerformed
+
+    private void editGenderComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editGenderComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editGenderComboBoxActionPerformed
 
     public static void main(String args[]) {
         try {

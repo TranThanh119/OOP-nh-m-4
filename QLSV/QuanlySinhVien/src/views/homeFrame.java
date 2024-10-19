@@ -226,7 +226,7 @@ public class homeFrame extends javax.swing.JFrame {
         }
     }
     public void homeTableNote(int type){
-        //type = 0 tuc la con chuot o trong bang
+        //Type = 0 tức là trỏ chuột ở trong bảng
         if(!allClassCheckBox.isSelected()){
             messageLabel.setForeground(Color.RED);
             if(type == 0){

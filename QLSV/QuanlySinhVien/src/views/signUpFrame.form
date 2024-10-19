@@ -92,7 +92,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="0" red="33" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng k&#xfd;"/>
+        <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng k&#xed;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="nameField">
@@ -124,7 +124,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="signUpButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng k&#xfd;"/>
+        <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng k&#xed;"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="signUpButtonActionPerformed"/>

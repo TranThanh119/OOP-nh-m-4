@@ -17,7 +17,7 @@ public class signUpFrame extends javax.swing.JFrame {
     }
     
     public void setDetail() {
-        setTitle("Sign up");
+        setTitle("Đăng kí");
         resetSatus();
         titleLabel.setForeground(colorFrame.getPrimeryColor());
     }
@@ -46,7 +46,7 @@ public class signUpFrame extends javax.swing.JFrame {
             resetSatus();
             uc.insertUser(name, pass);
             warnLabel.setText("Thành công!");
-            warnLabel.setForeground(Color.BLUE);
+            warnLabel.setForeground(Color.GREEN);
         }
     }
     @SuppressWarnings("unchecked")
@@ -66,7 +66,7 @@ public class signUpFrame extends javax.swing.JFrame {
 
         titleLabel.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(51, 0, 153));
-        titleLabel.setText("Đăng ký");
+        titleLabel.setText("Đăng kí");
 
         warnLabel.setFont(new java.awt.Font("Segoe UI", 2, 10)); // NOI18N
         warnLabel.setForeground(new java.awt.Color(255, 0, 0));
@@ -78,7 +78,7 @@ public class signUpFrame extends javax.swing.JFrame {
 
         jLabel5.setText("Mật Khẩu");
 
-        signUpButton.setText("Đăng ký");
+        signUpButton.setText("Đăng kí");
         signUpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signUpButtonActionPerformed(evt);
