@@ -32,20 +32,20 @@ public class signUpFrame extends javax.swing.JFrame {
         userController uc = new userController();
         if(name.equals("")){
             resetSatus();
-            warnLabel.setText("Lỗi!");
+            warnLabel.setText("User's name is null!");
         }
         else if(uc.checkUser(name)){
             resetSatus();
-            warnLabel.setText("Tài khoản đã tồn tại");
+            warnLabel.setText("This user was existed!");
         }
         else if(pass.equals("")){
             resetSatus();
-            warnLabel.setText("Lỗi!");
+            warnLabel.setText("Password is null!");
         }
         else{
             resetSatus();
             uc.insertUser(name, pass);
-            warnLabel.setText("Đăng ký thành công");
+            warnLabel.setText("Create user succesfully!");
             warnLabel.setForeground(Color.BLUE);
         }
     }
@@ -65,13 +65,13 @@ public class signUpFrame extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(450, 150, 0, 0));
 
         titleLabel.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(0, 153, 153));
+        titleLabel.setForeground(new java.awt.Color(51, 0, 153));
         titleLabel.setText("Đăng ký");
 
         warnLabel.setFont(new java.awt.Font("Segoe UI", 2, 10)); // NOI18N
         warnLabel.setForeground(new java.awt.Color(255, 0, 0));
         warnLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        warnLabel.setText("Lỗi");
+        warnLabel.setText("Cảnh báo");
         warnLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel4.setText("Tài Khoản");
@@ -93,26 +93,25 @@ public class signUpFrame extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addComponent(warnLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(43, 43, 43))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(titleLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nameField, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(passField))))
+                .addGap(14, 14, 14))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(signUpButton)
                 .addGap(91, 91, 91))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameField, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                            .addComponent(passField))
-                        .addGap(14, 14, 14))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(titleLabel)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,7 +137,7 @@ public class signUpFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
-
+        // TODO add your handling code here:
         createUser();
     }//GEN-LAST:event_signUpButtonActionPerformed
 

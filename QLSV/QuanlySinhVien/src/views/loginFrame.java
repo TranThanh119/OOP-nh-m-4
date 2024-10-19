@@ -14,14 +14,14 @@ public class loginFrame extends javax.swing.JFrame {
     public loginFrame() {
         initComponents();
         setDetail();
-    }
+    }  
     public void setDetail() {
         
         setTitle("Login");
         resetStatus();
         titleLabel.setForeground(colorFrame.getPrimeryColor());
     }
-    
+
     public void resetStatus(){
         nameWarningLabel.setText("");
         passWarningLabel.setText("");
@@ -40,52 +40,54 @@ public class loginFrame extends javax.swing.JFrame {
         }
     }
 
-//Check tài khoản và mật khẩu - Hàm này được gọi khi click đăng nhập
+//Check tên và mật khẩu
     public void checkLogin() {
         String name = userNameField.getText();
         String pass = passWordField1.getText();
         userC1 = new userController();
-// Kiểm tra tài khoản mật khẩu
+// Kiểm tra có tên và mật khẩu không
         if (name.equals("")) {
             resetStatus();
-            nameWarningLabel.setText("* Hãy nhập tài khoản!");
+            nameWarningLabel.setText("Chưa điền tài khoản!");
         } 
         else if (pass.equals("")) {
             resetStatus();
-            passWarningLabel.setText("* Hãy nhập mật khẩu!");
+            passWarningLabel.setText("Chưa điền mật khẩu!");
         } 
-//Truy vấn CSDL
+//Truy van CSDL
         else {
             userC1.getUserInfor(name);
             if (userC1.getUser1() != null) {
                 if (pass.equals(userC1.getUser1().getPassWord())) {
                     resetStatus();
                     passWordField1.setText("");
-                    //Đăng nhập thành công
+                    //Code khi dang nhap thanh cong
                     user = userC1.getUser(name);
                     homeFrame homeFrame1 = new homeFrame(user);
                     homeFrame1.setVisible(true);
                     dispose();
                     
-                    System.out.println(name + " thành công!");
+                    System.out.println(name + " is activating!");
                 } else {
+                    //Mk sai
                     resetStatus();
-                    passWarningLabel.setText("* Sai mật khẩu!");
+                    passWarningLabel.setText("Sai mật khẩu!");
                     statue = 1;
                 }
             } else {
+                //Nguoi dung khong ton tai
                 resetStatus();
-                nameWarningLabel.setText("* Không tồn tại!");
+                nameWarningLabel.setText("Người dùng chưa đăng kí!");
             }
         }
     }
-//Xử lý khi quên mật khẩu
+//Xử lý quên mật khẩu
     public void changePass(){
         if(statue == 1){
-            String newPass = "12345678";
+            String newPass = "123456789";
             userC1.updatePass(userC1.getUser1().getUserName(), newPass);
             passWordField1.setText(newPass);
-            passWarningLabel.setText("Mật khẩu mới là " + newPass);
+            passWarningLabel.setText("Your new password is " + newPass);
         }
     }
 
@@ -106,7 +108,6 @@ public class loginFrame extends javax.swing.JFrame {
         hideSelection = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(102, 204, 255));
         setBounds(new java.awt.Rectangle(400, 100, 0, 0));
 
         nameLabel.setBackground(new java.awt.Color(255, 255, 255));
@@ -187,11 +188,6 @@ public class loginFrame extends javax.swing.JFrame {
                     .addComponent(passLabel))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 262, Short.MAX_VALUE)
-                        .addComponent(forgetLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sigUpLabel))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(userNameField)
@@ -199,16 +195,22 @@ public class loginFrame extends javax.swing.JFrame {
                             .addComponent(nameWarningLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(passWarningLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(hideSelection, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(hideSelection, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(forgetLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sigUpLabel)))
                 .addGap(14, 14, 14))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(titleLabel)
-                .addGap(156, 156, 156))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(176, 176, 176)
-                .addComponent(loginBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(titleLabel)
+                        .addGap(141, 141, 141))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(loginBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(160, 160, 160))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,7 +222,7 @@ public class loginFrame extends javax.swing.JFrame {
                     .addComponent(nameLabel)
                     .addComponent(userNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(3, 3, 3)
-                .addComponent(nameWarningLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nameWarningLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passLabel)
@@ -237,39 +239,48 @@ public class loginFrame extends javax.swing.JFrame {
         );
 
         pack();
-    }
+    }// </editor-fold>//GEN-END:initComponents
+
     private void loginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBTNActionPerformed
-
+        // TODO add your handling code here:
         checkLogin();
-    }
+    }//GEN-LAST:event_loginBTNActionPerformed
+
     private void forgetLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgetLabelMouseClicked
-
+        // TODO add your handling code here:
         changePass();
-    }
+    }//GEN-LAST:event_forgetLabelMouseClicked
+
     private void forgetLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgetLabelMouseEntered
-
+        // TODO add your handling code here:
         forgetLabel.setForeground(Color.GRAY);
-    }
+    }//GEN-LAST:event_forgetLabelMouseEntered
+
     private void forgetLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgetLabelMouseExited
-
+        // TODO add your handling code here:
         forgetLabel.setForeground(Color.BLUE);
-    }
+    }//GEN-LAST:event_forgetLabelMouseExited
+
     private void sigUpLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sigUpLabelMouseClicked
-
+        // TODO add your handling code here:
          new signUpFrame().setVisible(true);
-    }
+    }//GEN-LAST:event_sigUpLabelMouseClicked
+
     private void sigUpLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sigUpLabelMouseEntered
-
+        // TODO add your handling code here:
         sigUpLabel.setForeground(Color.GRAY);
-    }
+    }//GEN-LAST:event_sigUpLabelMouseEntered
+
     private void sigUpLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sigUpLabelMouseExited
-
+        // TODO add your handling code here:
         sigUpLabel.setForeground(Color.BLUE);
-    }
-    private void hideSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hideSelectionActionPerformed
+    }//GEN-LAST:event_sigUpLabelMouseExited
 
+    private void hideSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hideSelectionActionPerformed
+        // TODO add your handling code here:
         hideOrShow();
-    }
+    }//GEN-LAST:event_hideSelectionActionPerformed
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -295,6 +306,7 @@ public class loginFrame extends javax.swing.JFrame {
         });
     }
 
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel forgetLabel;
     private javax.swing.JCheckBox hideSelection;
     private javax.swing.JButton loginBTN;
@@ -306,4 +318,5 @@ public class loginFrame extends javax.swing.JFrame {
     private javax.swing.JLabel sigUpLabel;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JTextField userNameField;
+    // End of variables declaration//GEN-END:variables
 }
